@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>JavaScript</title>
+ Change the color of the 3rd paragraph item to red or blue using the radio buttons below.
+
+</head>
+<body>
+ You may not change the structure of the paragraph elements in any way.
+ <p>Blah</p>
+ <p>Blah</p>
+ <p>Blah</p>
+ <p>Blah</p>
+ <p>Blah</p>
+ <p>Blah</p>
+ <p>Blah</p>
+
+ <label>
+ <input type="radio" id="blue" value = "blue">
+ Blue
+ </label>
+
+ <label>
+ <input type="radio" id="red" value = "red">
+ Red
+ </label>
+
+</fieldset>
+
+<script type="text/javascript"> // YOUR CODE HERE
+document.getElementById("blue").addEventListener("click", function(){
+  document.querySelector("p").childNodes[2].fontcolor("blue");
+});
+ </script>
+</body>
+</html>
