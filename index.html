@@ -17,21 +17,22 @@
  <p>Blah</p>
 
  <label>
- <input type="radio" id="blue" value = "blue">
+ <input type="radio" id="blue" onclick="changeColor('blue');" value = "blue">
  Blue
  </label>
 
  <label>
- <input type="radio" id="red" value = "red">
+ <input type="radio" id="red" onclick="changeColor('red');" value = "red">
  Red
  </label>
 
 </fieldset>
 
 <script type="text/javascript"> // YOUR CODE HERE
-document.getElementById("blue").addEventListener("click", function(){
-  document.querySelector("p").childNodes[2].fontcolor("blue");
-});
+function changeColor(newColor) {
+  var elem = document.querySelectorAll("p");
+  elem[2].style.color = newColor;
+}
  </script>
 </body>
 </html>
